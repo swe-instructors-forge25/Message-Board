@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+body {
+  font-family: Roboto;
+  background-color: rgb(221, 247, 255);
+}
+
+.create-form,
+.edit-form {
+  background-color: white;
+  width: 450px;
+  padding-bottom: 30px;
+  border: solid;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.create-form {
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+.create-form-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.title {
+  text-align: center;
+}
+
+.edit-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: 20px;
+}
+
+.input-box {
+  display: block;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+}
+
+.area-input {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.username-box,
+.message-box {
+  font-family: Roboto;
+  font-size: 18px;
+  border-radius: 4px;
+  border: none;
+  background-color: rgb(244, 244, 244);
+  /* box-shadow: 0px 0px 5px rgb(230, 230, 230) inset; */
+  padding-left: 5px;
+  border: solid;
+  border-width: 1px;
+  border-color: grey;
+}
+
+.username-box {
+  width: 350px;
+  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.username-box::placeholder,
+.message-box::placeholder {
+  font-size: 18px;
+  color: rgb(151, 151, 151);
+}
+
+.message-box {
+  min-height: 60px;
+  min-width: 350px;
+  max-width: 350px;
+  max-height: 110px;
+}
+
+.posts-title {
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  /* text-decoration: underline; */
+}
+
+.sort-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.messages-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-left: 30px;
+}
+
+.message {
+  background-color: white;
+  border: solid;
+  width: 300px;
+  height: 255px;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-top: auto;
+}
+
+.inner-message {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.post-message {
+  font-size: 18px;
+  padding-right: 10px;
+}
+
+.post-username {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.background-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  z-index: 9998;
+}
+
+/* BUTTONS */
+
+.pen-img {
+  height: 25px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  padding-right: 1px;
+  padding-left: 1px;
+}
+
+.trash-img {
+  height: 25px;
+  padding-top: 4px;
+  padding-bottom: 3px;
+  padding-right: 3px;
+  padding-left: 3px;
+  margin-bottom: -2px;
+}
+
+.trash-button,
+.pen-button {
+  border-radius: 20px;
+  border: none;
+}
+
+.trash-button {
+  /* background-color: rgb(255, 136, 136); */
+  background-color: white;
+  margin-right: 10px;
+}
+
+.trash-button:hover {
+  background-color: rgb(255, 166, 166);
+}
+
+.trash-button:active {
+  background-color: rgb(233, 119, 119);
+}
+
+.pen-button {
+  background-color: white;
+}
+
+.pen-button:hover {
+  background-color: rgb(192, 222, 255);
+}
+
+.pen-button:active {
+  background-color: rgb(147, 187, 230);
+}
+
+.create-button,
+.clear-button,
+.edit-button,
+.cancel-button,
+.sort-button {
+  border: none;
+  font-size: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 8px;
+}
+
+.create-button,
+.edit-button {
+  margin-right: 10px;
+  background-color: rgb(184, 221, 184);
+}
+
+.create-button:hover,
+.edit-button:hover {
+  background-color: rgb(168, 211, 168);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.create-button:active,
+.edit-button:active {
+  background-color: rgb(149, 199, 149);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.clear-button,
+.cancel-button {
+  background-color: rgb(192, 222, 255);
+}
+
+.clear-button:hover,
+.cancel-button:hover {
+  background-color: rgb(173, 208, 245);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.clear-button:active,
+.cancel-button:active {
+  background-color: rgb(146, 186, 228);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sort-button {
+  background-color: rgb(253, 255, 192);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sort-button:hover {
+  background-color: rgb(236, 239, 152);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.sort-button:active {
+  background-color: rgb(221, 224, 117);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
